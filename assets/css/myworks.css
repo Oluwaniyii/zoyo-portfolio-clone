@@ -1,6 +1,6 @@
 section#my-works {
 	background: var(--cl-light);
-	padding: 3em 10px;
+	padding: 5em 10px;
 }
 section#my-works > * {
 	-webkit-transition: all 0.5s ease-out;

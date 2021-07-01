@@ -24,6 +24,11 @@
 		<link rel="stylesheet" href="./assets/css/contact.css" />
 		<link rel="stylesheet" href="./assets/css/social.css" />
 		<link rel="stylesheet" href="./assets/css/footer.css" />
+		<!-- Animation css -->
+		<link
+			rel="stylesheet"
+			href="./assets/css/animation/animation_override.css"
+		/>
 	</head>
 	<!-- BODY -->
 	<body onresize="resizeMedia()">
@@ -37,13 +42,14 @@
 
 					<ul class="nav-links">
 						<!-- <div class="container"> -->
-						<li class="navlink active"><a href="#">me</a></li>
-						<li class="navlink"><a href="#">services</a></li>
-						<li class="navlink"><a href="#">resume</a></li>
-						<li class="navlink"><a href="#">projects</a></li>
-						<li class="navlink"><a href="#">blog</a></li>
-						<li class="navlink"><a href="#">contact</a></li>
-						<li class="navlink"><a href="#">pages</a></li>
+						<li class="navlink active"><a href="#hero">me</a></li>
+						<li class="navlink"><a href="#services">services</a></li>
+						<li class="navlink"><a href="#experience">experience</a></li>
+						<li class="navlink"><a href="#work-expertise">expertise</a></li>
+
+						<li class="navlink"><a href="#my-works">projects</a></li>
+						<li class="navlink"><a href="#blogs">blogs</a></li>
+						<li class="navlink"><a href="#contact-me">contact</a></li>
 						<!-- </div> -->
 					</ul>
 				</div>
@@ -51,10 +57,8 @@
 		</header>
 
 		<!-- Hero Start -->
-		<div
-			class="hero"
-			style="background-image: url('./assets/images/hero-bg.jpg')"
-		>
+		<section id="hero">
+			<div class="background"></div>
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="content">
@@ -94,7 +98,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 		<!-- Hero End -->
 
 		<!-- Main Start -->
@@ -824,10 +828,13 @@
 		<!-- Main End -->
 
 		<!-- Footer Start -->
-		<footer class="footer">&copy; 2021, Copied from Zoyothemes</footer>
+		<footer class="footer">© 2021 Queue. Design by Zoyothemes</footer>
 		<!-- Footer End -->
 
 		<!-- script -->
-		<script src="./assets/js/media.js"></script>
+		<script src="./assets/js/util.js"></script>
+		<script src="./assets/js/navbar.js"></script>
+		<script src="./assets/js/parallax.js"></script>
+		<script src="./assets/js/scrollspy.js"></script>
 	</body>
 </html>

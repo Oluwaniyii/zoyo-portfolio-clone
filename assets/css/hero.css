@@ -1,18 +1,20 @@
-div.hero {
+section#hero {
 	display: block;
 	padding: 10px;
+	background-image: url("../../images/hero-bg.jpg");
 	background-attachment: scroll;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	position: relative;
+	background: rgb(2, 7, 21);
 }
-div.hero > * {
+section#hero > * {
 	-webkit-transition: all 0.5s ease-out;
 	transition: all 0.5s ease-out;
 }
 
-div.hero div.overlay {
+section#hero div.overlay {
 	background-color: rgba(60, 72, 88, 0.7);
 	background-color: rgba(60, 72, 88, 0.771);
 	/* background-color: rgba(60, 72, 88, 0.9); */
@@ -25,7 +27,7 @@ div.hero div.overlay {
 	height: 100%;
 }
 
-div.hero div.content {
+section#hero div.content {
 	/* min-height: 500px; */
 	margin-top: 100px;
 	margin-bottom: 100px;
@@ -45,55 +47,56 @@ div.hero div.content {
 	justify-content: center;
 }
 
-div.hero div.content img.image-dp {
+section#hero div.content img.image-dp {
 	height: 150px;
 	max-width: 100%;
 	border: 5px solid #dee2e6;
 	border-radius: 50% !important;
 }
-div.hero div.content .heading {
+
+section#hero div.content .heading {
 	font-size: var(--fs-lg);
 	margin-top: 0.5em;
 }
-div.hero div.content .designation {
+section#hero div.content .designation {
 	font-size: var(--fs-sm);
 	font-weight: var(--fw-400);
 	margin-top: 0.15em;
 }
 
-div.hero div.content div.hero-btn {
+section#hero div.content section#hero-btn {
 	margin-top: 1.5rem;
 }
 
-div.hero div.content > * {
+section#hero div.content > * {
 	position: relative;
 	text-align: center;
 	margin: 10px auto;
 }
 
 @media screen and (min-width: 480px) {
-	div.hero {
+	section#hero {
 		padding: 2em;
 	}
-	div.hero div.content {
+	section#hero div.content {
 		/* min-height: 550px; */
 		margin-top: 70px;
 		margin-bottom: 100px;
 	}
-	div.hero div.content img.image-dp {
+	section#hero div.content img.image-dp {
 		height: 200px;
 	}
 }
 @media screen and (min-width: 768px) {
-	div.hero {
+	section#hero {
 		background-attachment: fixed;
 		background-attachment: scroll;
 	}
-	div.hero div.content {
+	section#hero div.content {
 		/* min-height: 600px; */
 		/* margin-top: 150px; */
 	}
-	div.hero div.content img.image-dp {
+	section#hero div.content img.image-dp {
 		height: 250px;
 	}
 }
@@ -101,3 +104,5 @@ div.hero div.content > * {
 }
 @media screen and (min-width: 1200px) {
 }
+
+/* Mutate For Animations */

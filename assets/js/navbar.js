@@ -1,10 +1,3 @@
-var $ = (selector) => document.querySelector(selector);
-var $a = (selector) => Array.from(document.querySelectorAll(selector));
-
-var wn = window;
-var dc = document;
-var bd = document.body;
-
 //navbar
 //responsive
 /**
@@ -80,7 +73,6 @@ function navbarCollapseToggle() {
 // Window Init
 (function init() {
 	const navbar = $("nav.navbar");
-	console.log(wn.innerWidth);
 	const isMoblie = wn.innerWidth <= 1024 ? true : false;
 	if (isMoblie) {
 		navbar.className = "navbar navbar-collapsed bg-light";
