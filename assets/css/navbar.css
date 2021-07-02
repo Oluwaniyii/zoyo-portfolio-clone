@@ -5,7 +5,7 @@ nav.navbar {
 	-webkit-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
 	color: var(--cl-white);
-	z-index: 99;
+	z-index: 100;
 }
 
 nav.navbar > * {

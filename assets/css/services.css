@@ -51,6 +51,10 @@ section#services .grid-board .card .services-text-content {
 	margin-bottom: 10px;
 }
 
+section#services .grid-board .card .service-icon {
+	color: var(--cl-primary);
+}
+
 section#services .grid-board .card .service-text-title {
 	font-weight: 600;
 }

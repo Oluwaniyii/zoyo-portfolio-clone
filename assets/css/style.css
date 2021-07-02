@@ -125,6 +125,7 @@ body {
 	background-color: var(--cl-white);
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: lightblue;
+	overflow-x: hidden;
 }
 
 section {
@@ -209,18 +210,19 @@ h6 {
 	color: var(--cl-white);
 	-webkit-box-shadow: 0 16px 16px -8px rgb(22 28 45 / 16%);
 	box-shadow: 0 16px 16px -8px rgb(22 28 45 / 16%);
-	-webkit-transition: -webkit-transform 0.3s ease-in-out;
-	transition: -webkit-transform 0.3s ease-in-out;
-	transition: transform 0.3s ease-in-out;
-	transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	-webkit-filter: brightness(100%);
+	filter: brightness(100%);
 }
 
 .btn-primary:hover {
-	border: 1px solid #0074f0;
-	background-color: #0056b3 !important;
-	border-color: #0056b3 !important;
+	border: 1px solid var(--cl-primary);
+	border-color: var(--cl-primary);
 	-webkit-transform: translateY(-1px);
 	transform: translateY(-1px);
+	-webkit-filter: brightness(90%);
+	filter: brightness(90%);
 }
 
 .btn.rounded {
@@ -247,6 +249,153 @@ h6 {
 }
 /* .card-body { */
 /* } */
+
+/* back to top */
+a#back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	color: var(--cl-white);
+	text-decoration: none;
+	display: -ms-grid;
+	display: grid;
+	place-content: center;
+	font-weight: var(--fw-700);
+	background: var(--cl-primary);
+	border: 1px solid var(--cl-primary);
+	-webkit-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.138);
+	box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.138);
+	z-index: 90;
+	-webkit-transition: all 0.5s ease-in-out, opacity 0.3s ease-in-out;
+	transition: all 0.5s ease-in-out, opacity 0.3s ease-in-out;
+	opacity: 0.85;
+}
+
+a#back-to-top.active {
+	opacity: 1;
+	pointer-events: auto;
+	transform: translateY(0);
+}
+
+a#back-to-top.active:hover {
+	background: var(--cl-primary);
+}
+
+a#back-to-top.hidden {
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(20px);
+}
+
+/* theme picker */
+div#theme-picker {
+	position: fixed;
+	top: 20%;
+	-webkit-transform: translateY(-20px);
+	transform: translateY(-20px);
+	left: 0;
+	display: -ms-grid;
+	display: grid;
+	place-content: center;
+	background: var(--cl-white);
+	-webkit-box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.077);
+	box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.077);
+	-webkit-transition: all 0.53s ease-in-out;
+	-ms-transition: all 0.53s ease-in-out;
+	transition: all 0.53s ease-in-out;
+	-webkit-transform: translateX(calc(-100% - 1px));
+	transform: translateX(calc(-100% - 1px));
+	z-index: 90;
+}
+
+div#theme-picker.active {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+
+div#theme-picker ul {
+	list-style: none;
+	padding: 1.25em;
+	display: -ms-grid;
+	-ms-grid-columns: (70px) [auto-fit];
+	grid-template-columns: 1fr 1fr 1fr;
+	display: grid;
+	-webkit-box-pack: justify;
+	-ms-box-pack: justify;
+	justify-content: space-between;
+	grid-gap: 0.5em;
+}
+
+div#theme-picker ul li span {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: transparent;
+}
+
+div#theme-picker button#theme-picker-toggle {
+	position: absolute;
+	top: 0px;
+	right: -40px;
+	width: 40px;
+	padding: 0.21em 0;
+	display: -ms-grid;
+	display: grid;
+	place-content: center;
+	background: var(--cl-white);
+	border: 1px solid rgba(204, 204, 204, 0.649);
+	border-radius: 0 7px 7px 0;
+	font-weight: var(--fw-700);
+	transition: all 0.53s ease-in-out;
+	color: var(--cl-primary);
+
+	z-index: +1;
+}
+
+div#theme-picker.active button#theme-picker-toggle {
+	background: var(--cl-light);
+	-webkit-filter: brightness(95%);
+	filter: brightness(95%);
+}
+
+div#theme-picker button#theme-picker-toggle .icon {
+	font-size: 2em;
+	color: inherit;
+	animation: rotate 1.2s linear infinite;
+	perspective: 100px;
+}
+
+div#theme-picker ul li span#blue {
+	background: #0d6efd;
+}
+div#theme-picker ul li span#pink {
+	background: #e54b4b;
+}
+div#theme-picker ul li span#teal {
+	background: #00758f;
+}
+div#theme-picker ul li span#green {
+	background: #01a479;
+}
+div#theme-picker ul li span#yellow {
+	background: #eaa21d;
+}
+div#theme-picker ul li span#indigo {
+	background: #280677;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotateZ(0deg);
+	}
+	to {
+		transform: rotateZ(180deg);
+	}
+}
 
 @media screen and (min-width: 480px) {
 	.container {
